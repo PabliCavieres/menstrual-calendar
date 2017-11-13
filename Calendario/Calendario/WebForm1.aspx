@@ -8,20 +8,20 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form action="WebForm3.aspx" method="post">
     <div>
         
         Tienes una cuenta? Si no, haz clic <a href="WebForm2.aspx">Aquí</a>
-        
+     
         Iniciar sesión
         <br />
-        <form action="#" method="post">
+        
             Usuario: <input type="text" name="txtUsuarioInicio" required="required"  />
             <br />
             Contraseña: <input type="password" name="txtContraseñaInicio"  required="required"/>
             <br />
-            <input type="submit" name="btnAceptar" value="Aceptar" />
-        </form>
+            <input type="submit" name="btnAceptar" value="Iniciar Sesion" />
+       
     </div>
     </form>
 </body>

@@ -8,12 +8,13 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form action="WebForm1.aspx" method="post">
     <div>
         <h1>Crear Usuario</h1>
 
         Usuario: <input type="text" name="txtNomUsuario" required="required" />
-        COntraseña: <input type="text" name="txtContrasenia" required="required" />
+        Contraseña: <input type="password" name="txtContrasenia" required="required" />
+        <input type="submit" value="Aceptar">
 
     </div>
     </form>
