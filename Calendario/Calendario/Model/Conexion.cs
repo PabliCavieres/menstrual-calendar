@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 /*imports*/
 
 public class Conexion{
-    public class Conexion{
+   
         private SqlConnection con; // Connection
         private SqlCommand sen; // Statement
         public SqlDataReader rs; // ResultSet
@@ -54,5 +54,5 @@ public class Conexion{
             con.Close();
         }
 
-    }
+    
 }
