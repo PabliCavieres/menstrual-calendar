@@ -10,15 +10,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 
-    
-
     <script runat="server">
     protected void Calendar1_SelectionChanged(object sender, System.EventArgs e) {
 
-
-       
-
-       
         Label1.Text = "You selected date(s) : <br />";
        
         for (int i=0; i<Calendar1.SelectedDates.Count; i++){
@@ -31,11 +25,11 @@
 
 </head>
 <body>
-    <form action="WebForm5.aspx" method="post" runat="server">
+    <form action="" method="post" runat="server">
         <div>
             Tus datos han sido cargados correctamente
-            <br>
-            Fecha de la ultima regla : <input type="number" value="fechaUltimaRegla"><br>
+            <br />
+       
                   
         
         <asp:Label 
@@ -92,8 +86,10 @@
                  />
         </asp:Calendar>
 
-            <input type="submit" value="Aceptar">
+            <br/>
 
+      <input type="button" onclick="location.href='WebForm5.aspx'" value="Aceptar" /> 
+        
         </div>
     </form>
 </body>

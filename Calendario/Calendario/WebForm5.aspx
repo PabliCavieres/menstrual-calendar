@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-    <form action="WebForm4.aspx" method="post">
+    <form action="" method="post">
         <div>
             
             <h4> Registre sus estados de ánimo</h4>

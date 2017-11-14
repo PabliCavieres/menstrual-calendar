@@ -14,15 +14,11 @@
             <br>
             Necesitamos que llene estos datos antes de Comenzar
             <br>
-            Fecha de la ultima regla : <input type="number" value="fechaUltimaRegla"><br>
+            Fecha de la ultima regla : <input type="text" value="fechaUltimaRegla"><br>
             Duración del Ciclo : <input type="number"><br>
             Duracion del Periodo : <input type="number"><br>
             <br>
             <input type="submit" value="Aceptar">
-
-
-
-
         </div>
     </form>
 </body>
