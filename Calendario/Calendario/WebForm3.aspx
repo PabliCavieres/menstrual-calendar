@@ -14,7 +14,7 @@
             <br>
             Necesitamos que llene estos datos antes de Comenzar
             <br>
-            Fecha de la ultima regla : <input type="number"><br>
+            Fecha de la ultima regla : <input type="number" value="fechaUltimaRegla"><br>
             Duración del Ciclo : <input type="number"><br>
             Duracion del Periodo : <input type="number"><br>
             <br>
