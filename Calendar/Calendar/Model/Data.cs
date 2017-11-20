@@ -8,12 +8,19 @@ namespace Calendar.Model {
         private String query;
 
         public Data() {
-            con = new Conexion("calendary_bd");
+            con = new Conexion("calendario_bd");
         }
 
         public void crearUsuario(Usuario u) {
-            query = "INSERT INTO usuario VALUES('" + u.Usser + "', '" + u.Pass + "');";
+            query = "INSERT INTO usuario VALUES('" + u.Usser + "', '" + u.Pass + "', '" + u.Sesion + "');";
             con.Ejecutar(query);
+        }
+
+
+        public void SesionUsuario(int id) {
+            query = "UPDATE usuario SET sesion = 1 WHERE id = "+id;
+            con.Ejecutar(query);
+            con.Cerrar();
         }
 
         public void crearRegistro(FichaPeriodo f) {
@@ -32,6 +39,7 @@ namespace Calendar.Model {
                 u.Id = con.rs.GetInt32(0);
                 u.Usser = con.rs.GetString(1);
                 u.Pass = con.rs.GetString(2);
+                u.Sesion = con.rs.GetBoolean(3);
             }
             return u;
         }
@@ -53,6 +61,11 @@ namespace Calendar.Model {
                 lista.Add(tip);
             }
             return lista;
+        }
+
+        public void registrarChecks(int idCheck) {
+            query = "INSERT";
+
         }
     }
 }

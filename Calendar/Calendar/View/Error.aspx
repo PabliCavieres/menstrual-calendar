@@ -9,20 +9,7 @@
 </head>
 <body>
      <h1>Error</h1>
-    <% 
-        try {
-            String error = Session["error"].ToString();
-
-            if (error == null) {
-                Response.Redirect("Index.aspx");
-            }
-
-            Response.Write("ERROR: "+error);
-        } catch (Exception) {
-            Response.Redirect("Index.aspx");
-        }
-       
-    %>
+  
 
      <a href="Index.aspx">Volver</a>
 </body>

@@ -11,27 +11,26 @@
      <%
         String nombre = null;
         try {
-            nombre = Session["nombre"].ToString();
+            nombre = Session["txtUsuarioInicio"].ToString();
 
-            if (nombre == null) {
-                Response.Redirect("Index.aspx");
-            }
         } catch (Exception) {
             Response.Redirect("Index.aspx");
         }
 
     %>
 
-    <form action="Calendario.aspx" method="post">
+    <form action="../Controller/RegistrarCiclo.ashx" method="post">
         <div>
-            Bienvenida<%=nombre %>
+            Bienvenida <%=nombre %>
             <br/>
             Necesitamos que llene estos datos antes de Comenzar
             <br/>
-            Fecha de la ultima regla : <input type="text" value="fechaUltimaRegla"/><br/>
-            Duración del Ciclo : <input type="number"/><br/>
-            Duracion del Periodo : <input type="number"/><br/>
+            Fecha de la ultima regla : <input type="text" name="fechaUltimaRegla" placeholder="AAAA/mm/dd"/><br/>
+            Duración del Ciclo : <input type="number" name="duracionCiclo"/><br/>
+            Duracion del Periodo : <input type="number" name="duracionPeriodo"/><br/>
             <br/>
+
+            
             <input type="submit" value="Aceptar"/>
         </div>
     </form>

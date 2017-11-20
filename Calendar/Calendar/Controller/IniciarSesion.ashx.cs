@@ -14,21 +14,42 @@ namespace Calendar.Controller {
 
         public void ProcessRequest(HttpContext context) {
 
-            String nombreUsuario = context.Request.Params["txtUsuarioInicio"];
-            String passUsuario = context.Request.Params["txtContraseñaInicio"];
+            try {
+                String nombreUsuario = context.Request.Params["txtUsuarioInicio"];
+                String passUsuario = context.Request.Params["txtContraseñaInicio"];
 
-            Data d = new Data();
-            
-            Usuario u = d.getUsuario(nombreUsuario, passUsuario);
+                Data d = new Data();
 
-            if(u == null){
-                context.Session["error"] = "Usuario no encontrado";
-                context.Response.Redirect("../View/Error.aspx");
-            }else{
-                context.Session["nombreUsuario"] = u.Usser;
-                context.Session["txtContraseñaInicio"] = u.Pass;
-                context.Response.Redirect("../View/Menu.aspx");
-            } 
+                Usuario u = d.getUsuario(nombreUsuario, passUsuario);
+
+                if (u == null) {
+
+                    
+                    context.Session["error"] = "Usuario no encontrado";
+                    context.Response.Redirect("../View/Error.aspx");
+                    
+                } else {
+                    
+                    context.Session["txtUsuarioInicio"] = u.Usser;
+                    context.Session["txtContraseñaInicio"] = u.Pass;
+                    
+                    if (u.Sesion == false) {
+                        d.SesionUsuario(u.Id);
+                        context.Response.Redirect("../View/Menu.aspx");
+                    } else if(u.Sesion == true) {
+
+                        context.Response.Redirect("../View/Calendario.aspx");
+                    }
+
+
+                    
+                        
+                    
+                }
+            } catch (Exception e) {
+
+                context.Response.Write("Error"+e);
+            }
              
         }
 

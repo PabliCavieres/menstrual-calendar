@@ -9,7 +9,7 @@ namespace Calendar.Model {
         private int id;
         private String usser;
         private String pass;
-
+        private bool sesion;
 
 
         public Usuario() {
@@ -18,5 +18,6 @@ namespace Calendar.Model {
         public int Id { get => id; set => id = value; }
         public string Usser { get => usser; set => usser = value; }
         public string Pass { get => pass; set => pass = value; }
+        public bool Sesion { get => sesion; set => sesion = value; }
     }
 }

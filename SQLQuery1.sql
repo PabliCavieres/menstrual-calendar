@@ -1,18 +1,20 @@
-CREATE DATABASE calendary_bd;
-USE calendary_bd;
-
+﻿drop DATABASE calendario_bd;
+CREATE DATABASE calendario_bd;
+GO
+USE calendario_bd;
+GO
 CREATE TABLE usuario(
 	id INT IDENTITY(1,1),
     usser VARCHAR (20),
 	pass VARCHAR(20),
+	sesion bit,
 	primary key(id)
 );
 
-SELECT *
-FROM usuario where usser = 'berny'
+select * from usuario
+UPDATE usuario set sesion = 1 WHERE id = 1;
 
-insert into usuario values ('maria',12345);
-
+GO
 CREATE TABLE fichaPeriodoInicio(
 	id INT IDENTITY(1,1),
     fechaUltimo date,
@@ -20,7 +22,7 @@ CREATE TABLE fichaPeriodoInicio(
     duracionPeriodo int,
     primary key(id)
 );
-
+GO
 CREATE TABLE registro(
 	id INT IDENTITY(1,1),
     inicio bit,
@@ -72,13 +74,13 @@ CREATE TABLE registro(
     conMalOlor bit,
     primary key(id)
 );
-
+GO
 create table tips(
 	id int IDENTITY(1,1),
 	descripcion varchar(1000),
 	primary key(id)
 );
-
+GO
 insert into tips values ('Los días fértiles se presentan aproximadamente a la mitad del ciclo menstrual');
 insert into tips values ('Saber si tu ciclo menstrual es regular o irregular también influirá de forma notable para calcular tus días fértiles');
 insert into tips values ('El embarazo se consigue cuando se produce la ovulación y se tienen relaciones sexuales en el periodo preovulatorio');

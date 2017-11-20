@@ -8,9 +8,9 @@
     <title></title>
 </head>
 <body>
-   <form action="" method="post">
-        <div>
-            
+
+   <form action="../Controller/RegistrarDatos.ashx" method="post" id="checkForm">
+        <div>           
             <h4> Registre sus estados de ánimo</h4>
             agotada <input type="checkbox" value="checkagotada" />
             ansiosa <input type="checkbox" value="checkansiona" />
@@ -57,11 +57,7 @@
             conSangre <input type="checkbox" value="checkconSangre" />
             conMalOlor <input type="checkbox" value="checkconMalOlor" />
 
-
             <input type="submit" value="Registrar Datos">
-
-
-
 
         </div>
     </form>

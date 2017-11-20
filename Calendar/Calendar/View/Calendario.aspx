@@ -44,7 +44,8 @@
         </asp:Calendar>
     </form>
     
-    <input type="button" onclick="location.href='Registro.aspx'" value="Aceptar" /> 
+    Cuéntanos como te sientes hoy <input type="button" onclick="location.href='Registro.aspx'" value="Aquí" /> 
+    <a href="../Controller/CerrarSesion.ashx">Cerrar sesión</a>
 
 </body>
 </html>

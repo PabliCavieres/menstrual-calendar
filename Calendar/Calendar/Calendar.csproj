@@ -69,6 +69,8 @@
     <Content Include="Controller\IniciarSesion.ashx" />
     <Content Include="Controller\CrearUsuario.ashx" />
     <Content Include="Controller\CerrarSesion.ashx" />
+    <Content Include="Controller\RegistrarCiclo.ashx" />
+    <Content Include="Controller\RegistrarDatos.ashx" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -95,6 +97,12 @@
     </Compile>
     <Compile Include="Controller\IniciarSesion.ashx.cs">
       <DependentUpon>IniciarSesion.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\RegistrarCiclo.ashx.cs">
+      <DependentUpon>RegistrarCiclo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\RegistrarDatos.ashx.cs">
+      <DependentUpon>RegistrarDatos.ashx</DependentUpon>
     </Compile>
     <Compile Include="Model\Conexion.cs" />
     <Compile Include="Model\Data.cs" />

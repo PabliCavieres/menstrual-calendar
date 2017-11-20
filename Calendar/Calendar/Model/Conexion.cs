@@ -26,11 +26,10 @@ namespace Calendar.Model{
               Autenticación de windows*/
             // DESKTOP - TC26VSD\\SQLEXPRESS LAPTOP-65BDVNLT\\BERNY
 
-            con = new SqlConnection("server=LAPTOP-65BDVNLT\\BERNY;" +
-                                      "database=calendary_bd;" +
+            con = new SqlConnection("server=LAPTOP-NVBBT3RA\\SQLEXPRESS;" +
+                                      "database=calendario_bd;" +
                                       "Integrated Security=true;");
-
-
+            
               // url de conexión
 
         }
@@ -40,7 +39,7 @@ namespace Calendar.Model{
 
             con.Open();
             sen = new SqlCommand(query, con);
-
+            
             if (query.ToLower().Contains("select")) {
                 rs = sen.ExecuteReader();
             } else { //insert, update, delete
