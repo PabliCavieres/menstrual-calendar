@@ -64,13 +64,47 @@ namespace Calendar.Model {
         }
 
         public void RegistrarChecks(Registro r) {
-            query = "INSERT INTO registro VALUES("+r.Inicio+", "+r.Termino+", "+r.Observacion+", "+r.MetodoAnticonceptivo+", " +
-                " "+r.ActoSexual+", "+r.Agotada+", "+r.Ansiosa+", "+r.Coqueta+", "+r.Deprimida+", "+r.Enojada+", "+r.Nauseas+" " +
-                " "+r.Libidinosa+", "+r.Estres+", "+r.Irritable+", "+r.Insomnio+", "+r.Rara+", "+r.Sensible+", "+r.DolorCabeza+" " +
-                " "+r.Migraña+", "+r.DolorPechos+", "+r.SensibilidadPechos+", "+r.DolorEspalda+", "+r.DolorLumbar+", "+r.Calambre+" " +
-                " "+r.Escalosfrios+", "+r.Sarpullido+", "+r.Sofoco+", "+r.DolorPelvis+", "+r.Hinchazon+", "+r.Estreñimiento+", "+r.Diarrea+" " +
-                " "+r.Antojos+", "+r.DolorPorOvulacion+", "+r.Sangrado+", "+r.Manchado+", "+r.Seco+", "+r.Pegajoso+", "+r.Cremoso+" " +
-                " "+r.Verde+", "+r.ConSangre+", "+r.ConMalOlor+");";
+            query = "INSERT INTO registro VALUES( " +
+                " " + r.Inicio + "," +
+                " " + r.Termino + ", " +
+                " " + r.Observacion + ", " +
+                " " + r.MetodoAnticonceptivo + ", " +
+                " " + r.ActoSexual + ", " +
+                " " + r.Agotada + ", " +
+                " " + r.Ansiosa + ", " +
+                " " + r.Coqueta + ", " +
+                " " + r.Deprimida + ", " +
+                " " + r.Enojada + ", " +
+                " " + r.Nauseas + " " +
+                " " + r.Libidinosa + "," +
+                " " + r.Estres + "," +
+                " " + r.Irritable + "," +
+                " " + r.Insomnio + "," +
+                " " + r.Rara + "," +
+                " " + r.Sensible + "," +
+                " " + r.DolorCabeza + " " +
+                " " + r .Migraña + "," +
+                " " + r.DolorPechos + "," +
+                " " + r.SensibilidadPechos + "," +
+                " " + r.DolorEspalda + "," +
+                " " + r.DolorLumbar + "," +
+                " " + r.Calambre + " " +
+                " " + r.Escalosfrios + "," +
+                " " + r.Sarpullido + "," +
+                " " + r.Sofoco + "," +
+                " " + r.DolorPelvis + "," +
+                " " + r.Hinchazon + "," +
+                " " + r.Estreñimiento + "," +
+                " " + r.Diarrea + " " +
+                " " + r.Antojos + "," +
+                " " + r.DolorPorOvulacion + "," +
+                " " + r.Sangrado + "," +
+                " " + r.Manchado + "," +
+                " " + r.Seco + "," +
+                " " + r.Pegajoso + "," +
+                " " + r.Cremoso + " " +
+                " " + r.Verde + "," +
+                " " + r.ConSangre + ", " + r.ConMalOlor + ") ";
             con.Ejecutar(query);
 
         }

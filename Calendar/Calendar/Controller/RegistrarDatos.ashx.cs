@@ -17,8 +17,8 @@ namespace Calendar.Controller {
             r.Inicio = Boolean.Parse(context.Request.Params["checkinicio"]);
             r.Termino = Boolean.Parse(context.Request.Params["checktermino"]);
             r.Observacion = context.Request.Params["observacion"];
-            r.MetodoAnticonceptivo = Boolean.Parse(context.Request.Params["Metodo"]);
-            r.ActoSexual = Boolean.Parse(context.Request.Params["checkactosexual"]);
+            r.MetodoAnticonceptivo = context.Request.Params["Metodo"];
+            r.ActoSexual = Boolean.Parse(context.Request.Params["checkActosexual"]);
             r.Agotada = Boolean.Parse(context.Request.Params["checkagotada"]);
             r.Ansiosa = Boolean.Parse(context.Request.Params["checkansiosa"]);
             r.Coqueta = Boolean.Parse(context.Request.Params["checkcoqueta"]);
@@ -37,7 +37,7 @@ namespace Calendar.Controller {
             r.SensibilidadPechos = Boolean.Parse(context.Request.Params["checksensibilidadpechos"]);
             r.DolorLumbar = Boolean.Parse(context.Request.Params["checkdolorlumbar"]);
             r.Calambre = Boolean.Parse(context.Request.Params["checkcalambre"]);
-            r.Escalosfrios = Boolean.Parse(context.Request.Params["checkescalosfrios"]);
+            r.Escalosfrios = Boolean.Parse(context.Request.Params["checkescalofrios"]);
             r.Sarpullido = Boolean.Parse(context.Request.Params["checksarpullido"]);
             r.Sofoco = Boolean.Parse(context.Request.Params["checksofoco"]);
             r.DolorPelvis = Boolean.Parse(context.Request.Params["checkdolorpelvis"]);

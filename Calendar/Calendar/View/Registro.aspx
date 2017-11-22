@@ -20,11 +20,11 @@
             Se encuentra usando Metodos Anticonceptivos?
             <input type="radio" name="Metodo" value="SI" checked="checked"/> Si 
             <input type="radio" name="Metodo" value="NO"/> No
-            Acto Sexual <input type="checkbox" name="checkactosexual"/>
+            Acto Sexual <input type="checkbox" value="true" name="checkActosexual"/>
 
             <h4> Registre sus estados de ánimo</h4>
             agotada <input type="checkbox" value="true" name="checkagotada" />
-            ansiosa <input type="checkbox" value="true"  name="checkansiona"/>
+            ansiosa <input type="checkbox" value="true"  name="checkansiosa"/>
             coqueta <input type="checkbox" value="true" name="checkcoqueta"/>
             deprimida <input type="checkbox" value="true" name="checkdeprimida"/>
             enojada <input type="checkbox" value="true" name="checkenojada"/>

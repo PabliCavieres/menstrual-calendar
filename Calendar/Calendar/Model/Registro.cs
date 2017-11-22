@@ -10,7 +10,7 @@ namespace Calendar.Model {
         private bool inicio;
         private bool termino;
         private String observacion;
-        private bool metodoAnticonceptivo;
+        private String metodoAnticonceptivo;
         private bool actoSexual;
 
         /*Estado de ánimo*/
@@ -62,7 +62,7 @@ namespace Calendar.Model {
         public bool Inicio { get => inicio; set => inicio = value; }
         public bool Termino { get => termino; set => termino = value; }
         public String Observacion { get => observacion; set => observacion = value; }
-        public bool MetodoAnticonceptivo { get => metodoAnticonceptivo; set => metodoAnticonceptivo = value; }
+        public String MetodoAnticonceptivo { get => metodoAnticonceptivo; set => metodoAnticonceptivo = value; }
         public bool ActoSexual { get => actoSexual; set => actoSexual = value; }
         public bool Agotada { get => agotada; set => agotada = value; }
         public bool Ansiosa { get => ansiosa; set => ansiosa = value; }
