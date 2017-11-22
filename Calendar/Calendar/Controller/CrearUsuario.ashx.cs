@@ -17,7 +17,7 @@ namespace Calendar.Controller {
             Usuario nuevo = new Usuario();
 
             nuevo.Usser = context.Request.Params["txtNomUsuario"];
-            nuevo.Pass = (context.Request.Params["txtContrasenia"]);
+            nuevo.Pass = context.Request.Params["txtContrasenia"];
             nuevo.Sesion = false;
 
             d.crearUsuario(nuevo);

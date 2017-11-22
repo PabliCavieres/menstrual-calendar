@@ -12,7 +12,7 @@ CREATE TABLE usuario(
 );
 
 select * from usuario
-UPDATE usuario set sesion = 1 WHERE id = 1;
+UPDATE usuario set sesion = 1 WHERE id = 2;
 
 GO
 CREATE TABLE fichaPeriodoInicio(
@@ -22,6 +22,7 @@ CREATE TABLE fichaPeriodoInicio(
     duracionPeriodo int,
     primary key(id)
 );
+
 GO
 CREATE TABLE registro(
 	id INT IDENTITY(1,1),
@@ -75,6 +76,8 @@ CREATE TABLE registro(
     primary key(id)
 );
 GO
+select * from registro
+
 create table tips(
 	id int IDENTITY(1,1),
 	descripcion varchar(1000),
