@@ -22,14 +22,11 @@ namespace Calendar.Controller {
 
                 Usuario u = d.getUsuario(nombreUsuario, passUsuario);
 
-                if (u == null) {
-
-                    
+                if (u == null) {                 
                     context.Session["error"] = "Usuario no encontrado";
                     context.Response.Redirect("../View/Error.aspx");
                     
-                } else {
-                    
+                } else {                 
                     context.Session["txtUsuarioInicio"] = u.Usser;
                     context.Session["txtContraseñaInicio"] = u.Pass;
                     
@@ -37,7 +34,6 @@ namespace Calendar.Controller {
                         d.SesionUsuario(u.Id);
                         context.Response.Redirect("../View/Menu.aspx");
                     } else if(u.Sesion == true) {
-
                         context.Response.Redirect("../View/Calendario.aspx");
                     }
 

@@ -26,7 +26,7 @@ namespace Calendar.Model{
               Autenticación de windows*/
             // DESKTOP - TC26VSD\\SQLEXPRESS LAPTOP-65BDVNLT\\BERNY
 
-            con = new SqlConnection("server=LAPTOP-NVBBT3RA\\SQLEXPRESS;" +
+            con = new SqlConnection("server= LAPTOP-65BDVNLT\\BERNY;" +
                                       "database=calendario_bd;" +
                                       "Integrated Security=true;");
             

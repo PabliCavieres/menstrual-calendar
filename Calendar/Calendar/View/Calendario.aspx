@@ -10,7 +10,7 @@
     <script runat="server">
     protected void Calendar1_SelectionChanged(object sender, System.EventArgs e) {
 
-        Label1.Text = "You selected date(s) : <br />";
+        Label1.Text = "Tus datos seleccionados son : <br />";
        
         for (int i=0; i<Calendar1.SelectedDates.Count; i++){
             Label1.Text += Calendar1.SelectedDates[i].ToShortDateString() +
@@ -18,14 +18,14 @@
         }
     }
         </script>
-
-
 </head>
 <body>
-       
-    Tus datos han sido cargados correctamente
-            <br />
-    
+<center>
+    <div class="form">
+        <div><br><br>
+            Tus datos han sido cargados correctamente
+            <br /><br>
+        </div>
     <form id="form1" runat="server">
 
         <asp:Label ID="Label1" 
@@ -34,18 +34,80 @@
                     Font-Italic="true"
                     Font-Names="Comic Sans MS"
                     Font-Size="Large"/>
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px">
+         <asp:Calendar ID="Calendar1" runat="server" BackColor="#ffe6e6" BorderStyle="Outset" BorderColor="indianred" BorderWidth="1px" Font-Names="Arial" Font-Size="11pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="360px">
             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
-            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
+            <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="white" VerticalAlign="Bottom" Font-Underline="false"/>
             <OtherMonthDayStyle ForeColor="#999999" />
-            <SelectedDayStyle BackColor="#333399" ForeColor="White" />
-            <TitleStyle BackColor="White" BorderColor="Black" BorderWidth="4px" Font-Bold="True" Font-Size="12pt" ForeColor="#333399" />
+            <SelectedDayStyle BackColor="indianred" ForeColor="White" />
+            <TitleStyle BackColor="indianred" BorderColor="indianred" BorderStyle="Outset" BorderWidth="2px" Font-Bold="True" Font-Size="12pt" ForeColor="white" Height="30px" />
             <TodayDayStyle BackColor="#CCCCCC" />
         </asp:Calendar>
     </form>
     
-    Cuéntanos como te sientes hoy <input type="button" onclick="location.href='Registro.aspx'" value="Aquí" /> 
-    <a href="../Controller/CerrarSesion.ashx">Cerrar sesión</a>
-
+    Cuéntanos ..¿Cómo te sientes hoy? <input type="button" onclick="location.href='Registro.aspx'" value="Aquí" class="button1" /> 
+  </div>
+    <br>
+    <input type="button" onclick="location.href = '../Controller/CerrarSesion.ashx'" value="Cerrar sesión" class="button1" /> 
+    <br>  
+</center>
 </body>
+<style>
+body{
+        Background-image:url("../Imagenes/fondoCal.jpg");
+    }
+    .button1 {
+        border-style: none;
+        border-color: inherit;
+        border-width: medium;
+        background: indianred;
+        color: #f2f2f2;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        position: relative;
+        box-sizing: border-box;
+        transition: all 500ms ease;
+        top: 0px;
+        left: 0px;
+    }
+
+     .button1:hover {
+        background: rgba(0,0,0,0);
+        color: indianred;
+        box-shadow: inset 0 0 0 3px indianred;
+     }
+
+    .cuadros {
+        width: 300px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid purple;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .form {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border-style:outset;
+        max-width: 700px;
+        border-radius: 30px 30px 30px 30px;
+        border-color:indianred;
+    }
+
+    .titulo{
+        border-color:indianred;
+        background-color:indianred;
+        border-style:solid;
+        width: 400px;
+        border-radius: 40px 40px 40px 40px;
+        margin-top:-40px;
+        color: white;
+    }
+
+    .imag{
+        width:2px; height:2px;
+        margin-right: 300px;
+    }
+</style>
 </html>

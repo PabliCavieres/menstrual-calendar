@@ -3,6 +3,7 @@ CREATE DATABASE calendario_bd;
 GO
 USE calendario_bd;
 GO
+--DROP DATABASE calendario_bd;
 CREATE TABLE usuario(
 	id INT IDENTITY(1,1),
     usser VARCHAR (20),
@@ -10,7 +11,7 @@ CREATE TABLE usuario(
 	sesion bit,
 	primary key(id)
 );
-
+insert into usuario values('Berny', '123', 1);
 select * from usuario
 UPDATE usuario set sesion = 1 WHERE id = 2;
 
