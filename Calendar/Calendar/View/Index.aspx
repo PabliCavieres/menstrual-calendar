@@ -15,10 +15,10 @@
     <div class="form">
          <div class="titulo"><h1>Iniciar sesión</h1></div><br>
             <div class="imag">
-                <img src="https://data.whicdn.com/images/239644643/original.gif">
+                <img src="https://data.whicdn.com/images/239644643/original.gif"/>
             </div> <!--"../Controller/IniciarSesion.ashx"-->         
     <form action="Menu.aspx" method="post">
-            Usuario: <input type="text" name="txtUsuarioInicio" required="required" class="cuadros" style="margin-right: -20px;"/><br>
+            Usuario: <input type="text" name="txtUsuarioInicio" required="required" class="cuadros" style="margin-right: -20px;" /><br>
             <br />
             Contraseña: <input type="password" name="txtContraseñaInicio"  required="required" class="cuadros"/>
             <br />

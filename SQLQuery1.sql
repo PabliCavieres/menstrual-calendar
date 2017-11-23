@@ -3,7 +3,6 @@ CREATE DATABASE calendario_bd;
 GO
 USE calendario_bd;
 GO
---DROP DATABASE calendario_bd;
 CREATE TABLE usuario(
 	id INT IDENTITY(1,1),
     usser VARCHAR (20),
@@ -30,8 +29,8 @@ CREATE TABLE registro(
     inicio bit,
     termino bit,
     observacion varchar(1000),
-    metodoAnticonceptivo bit,
-    actoSexual varchar(10),
+    metodoAnticonceptivo varchar(10),
+    actoSexual bit,
     
     /*Estado de ánimo*/
     agotada bit,

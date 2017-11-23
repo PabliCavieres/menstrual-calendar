@@ -20,11 +20,11 @@
 <center>
     <div class="form">
     <form action="../Controller/RegistrarCiclo.ashx" method="post">
-       <div class="titulo"><h2>Bienvenida <%=nombre %></h2></div><br>
+       <div class="titulo"><h2>Bienvenida <%=nombre%></h2></div><br>
             <br/>
             Necesitamos que llene estos datos antes de Comenzar
             <br/>
-            Fecha de la ultima regla : <input type="text" name="fechaUltimaRegla" placeholder="AAAA/mm/dd"  class="cuadros" required="required"/><br>
+            Fecha de la ultima regla : <input type="text" name="fechaUltimaRegla" placeholder="AA/MM/DD"  class="cuadros" required="required"/><br>
             Duración del Ciclo : <input type="number" name="duracionCiclo" class="cuadros" style="margin-right: -45px;" required="required"/><br>
             Duracion del Periodo : <input type="number" name="duracionPeriodo" class="cuadros" style="margin-right: -25px; "required="required"/><br>
             <br/><br/>         
