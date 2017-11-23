@@ -31,7 +31,8 @@ namespace Calendar.Controller {
                     context.Session["txtContraseñaInicio"] = u.Pass;
                     
                     if (u.Sesion == false) {
-                        d.SesionUsuario(u.Id);
+                        //d.SesionUsuario(u.Id);
+                        u.Sesion = true;
                         context.Response.Redirect("../View/Menu.aspx");
                     } else if(u.Sesion == true) {
                         context.Response.Redirect("../View/Calendario.aspx");

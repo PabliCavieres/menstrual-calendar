@@ -31,7 +31,7 @@ CREATE TABLE registro(
     termino bit,
     observacion varchar(1000),
     metodoAnticonceptivo bit,
-    actoSexual bit,
+    actoSexual varchar(10),
     
     /*Estado de ánimo*/
     agotada bit,
