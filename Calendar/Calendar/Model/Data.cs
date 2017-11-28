@@ -44,11 +44,11 @@ namespace Calendar.Model {
             return u;
         }
         
-        public List<Tips> getTip(int id) {
+        public Tips getTip(int id) {
             query = "SELECT * FROM tips WHERE id = " + id;
-            List<Tips> lista = new List<Tips>();
+       
             con.Ejecutar(query);
-            Tips tip;
+            Tips tip = null;
             while (con.rs.Read()) {
 
                 tip = new Tips();
@@ -56,9 +56,9 @@ namespace Calendar.Model {
                 tip.Id = con.rs.GetInt32(0);
                 tip.Descripcion = con.rs.GetString(1);
 
-                lista.Add(tip);
+                
             }
-            return lista;
+            return tip;
         }
 
         public void RegistrarChecks(Registro r) {
@@ -102,13 +102,30 @@ namespace Calendar.Model {
                 "'" + r.Cremoso + "', " +
                 "'" + r.Verde + "', " +
                 "'" + r.ConSangre + "', " +
-                "'" + r.ConMalOlor + "') ";
+                "'" + r.ConMalOlor + "', " +
+                "'"+r.IdUsuario+"', " +
+                "NOW()) ";
             con.Ejecutar(query);
 
         }
 
-        public List<Registro> getRegistro(String id) {
-            query = "SELECT * FROM registro WHERE id = " + id;
+        public int getIdUsuario(String nombre) {
+            query = "SELECT id FROM usuario where usser = '" + nombre;
+            Usuario u = null;
+            con.Ejecutar(query);
+            int id = 0;
+            while (con.rs.Read()) {
+                u = new Usuario();
+
+                u.Id = con.rs.GetInt32(0);
+                id = u.Id;
+            }
+            return id;
+
+        }
+
+        public List<Registro> getRegistro(int id) {
+            query = "SELECT * FROM registro WHERE idUsuario = " + id;
             List<Registro> lista = new List<Registro>();
             con.Ejecutar(query);
             Registro r;
@@ -154,7 +171,8 @@ namespace Calendar.Model {
                 r.Verde = con.rs.GetInt32(35);
                 r.ConSangre = con.rs.GetInt32(36);
                 r.ConMalOlor = con.rs.GetInt32(37);
-
+                r.IdUsuario = con.rs.GetInt32(38);
+                r.Fecha = con.rs.GetString(39);
                 lista.Add(r);
             }
             return lista;

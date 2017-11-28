@@ -15,10 +15,13 @@
  <br><br><br>
 
         <% Data d = new Data();
-            String idUsuarios = Request.Params["idUsuario"];
-            // Registro r = d.getRegistro("idUsuarios");
-            Registro r = new Registro();
+            
+            String nombre = (String)Session["txtUsuarioInicio"];
+            int id = d.getIdUsuario(nombre);
+            List<Registro> lista = d.getRegistro(id);
 
+
+            foreach (Registro r in lista) {
             %>
 
        <div class="form"> 
@@ -113,7 +116,7 @@
             </p><br/><br/>
            </div><br/><br/>
             <br>
-
+       <%} %>
             <input type="submit" value="Volver" class="button1"/><br/><br/>
     </form>
     </center>

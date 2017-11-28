@@ -7,6 +7,8 @@ namespace Calendar.Model {
     public class Registro {
 
         private int id;
+        private int idUsuario;
+        private String fecha;
         private String inicioOtermino;
         private String observacion;
         private String metodoAnticonceptivo;
@@ -98,5 +100,7 @@ namespace Calendar.Model {
         public int Verde { get => verde; set => verde = value; }
         public int ConSangre { get => conSangre; set => conSangre = value; }
         public int ConMalOlor { get => conMalOlor; set => conMalOlor = value; }
+        public int IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
     }
 }

@@ -28,7 +28,8 @@ select * from fichaPeriodoInicio
 GO
 CREATE TABLE registro(
 	id INT IDENTITY(1,1),
-    inicioOtermino varchar(10),
+    
+	inicioOtermino varchar(10),
     observacion varchar(1000),
     metodoAnticonceptivo varchar(10),
     actoSexual bit,
@@ -74,7 +75,10 @@ CREATE TABLE registro(
     verde bit,
     conSangre bit,
     conMalOlor bit,
-    primary key(id)
+	idUsuario int,
+	fecha date,
+    primary key(id),
+	foreign key (idUsuario) references usuario(id)
 );
 GO
 select * from registro
@@ -99,7 +103,7 @@ insert into tips values ('La ausencia de menstruación es un síntoma importante
 insert into tips values ('Los óvulos son las células sexuales o gametos femeninos.​Son células grandes, esféricas e inmóviles. Desde la pubertad, cada 28 días aproximadamente, madura un ovocito en uno de los ovarios y pasa a una de las trompas de falopio, durante el denominado ciclo menstrual, este cuando se fecunda por un espermatozoide se convierte en un cigoto');
 
 
-select * from tips
+select * from tips where id = 5
 
-
+drop table registro
 

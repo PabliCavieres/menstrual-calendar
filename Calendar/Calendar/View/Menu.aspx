@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Calendar.View.Menu" %>
-
+<%@ Import Namespace="Calendar.Model" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,13 +9,15 @@
 </head>
 <body>
      <%
-        String nombre = null;
-        try {
-            nombre = (String)Session["txtUsuarioInicio"];
-
-        } catch (Exception) {
-            Response.Redirect("Index.aspx");
-        }
+         String nombre = null;
+         try {
+             Data d = new Data();
+             nombre = (String)Session["txtUsuarioInicio"];
+            // int id = d.getIdUsuario(nombre);
+             //Session["idUsuario"] = id;
+         } catch (Exception) {
+             Response.Redirect("Index.aspx");
+         }
     %>
 <center>
     <div class="form">

@@ -31,26 +31,23 @@
         <%  
             Data d = new Data();
             Random r = new Random();
-            int num_A = r.Next(1,13);
+            int num_A = r.Next(1, 13);
+
+            Tips t = d.getTip(num_A);
+
+            Response.Write(t.Descripcion);
 
 
-            foreach (Tips t in d.getTip()) {
-
-                 Response.Write("<br/>"+d.getTip(r).ToString());
-            }
-
-           
         %> 
 
         
-        
-        <div style="margin-top:420px;">
+    </div>
+    <!-- BERNY: ARREGLA EL BOTON!!!!!!! >:C -->
+    <div style="margin-bottom:1000px;margin-left:170px; position:fixed;">
 
             <hr/>
             Ver Registro <br/><input type="button" onclick="location.href = 'VerRegistro.aspx'" value="Aquí" class="button1" />
         </div>
-    </div>
-
     <div class="CerrarSesion">
     <input type="button" onclick="location.href = '../Controller/CerrarSesion.ashx'" value="Cerrar sesión" class="button1" id="btnSesion" /> 
     </div>
