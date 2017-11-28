@@ -7,98 +7,96 @@ namespace Calendar.Model {
     public class Registro {
 
         private int id;
-        private bool inicio;
-        private bool termino;
+        private String inicioOtermino;
         private String observacion;
         private String metodoAnticonceptivo;
-        private bool actoSexual;
+        private int actoSexual;
 
         /*Estado de ánimo*/
-        private bool agotada;
-        private bool ansiosa;
-        private bool coqueta;
-        private bool deprimida;
-        private bool enojada;
-        private bool nauseas;
-        private bool libidinosa;
-        private bool estres;
-        private bool irritable;
-        private bool insomnio;
-        private bool rara;
-        private bool sensible;
+        private int agotada;
+        private int ansiosa;
+        private int coqueta;
+        private int deprimida;
+        private int enojada;
+        private int nauseas;
+        private int libidinosa;
+        private int estres;
+        private int irritable;
+        private int insomnio;
+        private int rara;
+        private int sensible;
 
         /*Síntomas*/
-        private bool dolorCabeza;
-        private bool migraña;
-        private bool dolorPechos;
-        private bool sensibilidadPechos;
-        private bool dolorEspalda;
-        private bool dolorLumbar;
-        private bool calambre;
-        private bool escalosfrios;
-        private bool sarpullido;
-        private bool sofoco;
-        private bool dolorPelvis;
-        private bool hinchazon;
-        private bool estreñimiento;
-        private bool diarrea;
-        private bool antojos;
-        private bool dolorPorOvulacion;
-        private bool sangrado;
-        private bool manchado;
+        private int dolorCabeza;
+        private int migraña;
+        private int dolorPechos;
+        private int sensibilidadPechos;
+        private int dolorEspalda;
+        private int dolorLumbar;
+        private int calambre;
+        private int escalosfrios;
+        private int sarpullido;
+        private int sofoco;
+        private int dolorPelvis;
+        private int hinchazon;
+        private int estreñimiento;
+        private int diarrea;
+        private int antojos;
+        private int dolorPorOvulacion;
+        private int sangrado;
+        private int manchado;
 
         /*Fluidos*/
-        private bool seco;
-        private bool pegajoso;
-        private bool cremoso;
-        private bool verde;
-        private bool conSangre;
-        private bool conMalOlor;
+        private int seco;
+        private int pegajoso;
+        private int cremoso;
+        private int verde;
+        private int conSangre;
+        private int conMalOlor;
 
         public Registro() {
         }
 
         public int Id { get => id; set => id = value; }
-        public bool Inicio { get => inicio; set => inicio = value; }
-        public bool Termino { get => termino; set => termino = value; }
+        public String InicioOtermino { get => inicioOtermino; set => inicioOtermino = value; }
         public String Observacion { get => observacion; set => observacion = value; }
         public String MetodoAnticonceptivo { get => metodoAnticonceptivo; set => metodoAnticonceptivo = value; }
-        public bool ActoSexual { get => actoSexual; set => actoSexual = value; }
-        public bool Agotada { get => agotada; set => agotada = value; }
-        public bool Ansiosa { get => ansiosa; set => ansiosa = value; }
-        public bool Coqueta { get => coqueta; set => coqueta = value; }
-        public bool Deprimida { get => deprimida; set => deprimida = value; }
-        public bool Enojada { get => enojada; set => enojada = value; }
-        public bool Nauseas { get => nauseas; set => nauseas = value; }
-        public bool Libidinosa { get => libidinosa; set => libidinosa = value; }
-        public bool Estres { get => estres; set => estres = value; }
-        public bool Irritable { get => irritable; set => irritable = value; }
-        public bool Insomnio { get => insomnio; set => insomnio = value; }
-        public bool Rara { get => rara; set => rara = value; }
-        public bool Sensible { get => sensible; set => sensible = value; }
-        public bool DolorCabeza { get => dolorCabeza; set => dolorCabeza = value; }
-        public bool Migraña { get => migraña; set => migraña = value; }
-        public bool DolorPechos { get => dolorPechos; set => dolorPechos = value; }
-        public bool SensibilidadPechos { get => sensibilidadPechos; set => sensibilidadPechos = value; }
-        public bool DolorEspalda { get => dolorEspalda; set => dolorEspalda = value; }
-        public bool DolorLumbar { get => dolorLumbar; set => dolorLumbar = value; }
-        public bool Calambre { get => calambre; set => calambre = value; }
-        public bool Escalosfrios { get => escalosfrios; set => escalosfrios = value; }
-        public bool Sarpullido { get => sarpullido; set => sarpullido = value; }
-        public bool Sofoco { get => sofoco; set => sofoco = value; }
-        public bool DolorPelvis { get => dolorPelvis; set => dolorPelvis = value; }
-        public bool Hinchazon { get => hinchazon; set => hinchazon = value; }
-        public bool Estreñimiento { get => estreñimiento; set => estreñimiento = value; }
-        public bool Diarrea { get => diarrea; set => diarrea = value; }
-        public bool Antojos { get => antojos; set => antojos = value; }
-        public bool DolorPorOvulacion { get => dolorPorOvulacion; set => dolorPorOvulacion = value; }
-        public bool Sangrado { get => sangrado; set => sangrado = value; }
-        public bool Manchado { get => manchado; set => manchado = value; }
-        public bool Seco { get => seco; set => seco = value; }
-        public bool Pegajoso { get => pegajoso; set => pegajoso = value; }
-        public bool Cremoso { get => cremoso; set => cremoso = value; }
-        public bool Verde { get => verde; set => verde = value; }
-        public bool ConSangre { get => conSangre; set => conSangre = value; }
-        public bool ConMalOlor { get => conMalOlor; set => conMalOlor = value; }
+        public int ActoSexual { get => actoSexual; set => actoSexual = value; }
+        public int Agotada { get => agotada; set => agotada = value; }
+        public int Ansiosa { get => ansiosa; set => ansiosa = value; }
+        public int Coqueta { get => coqueta; set => coqueta = value; }
+        public int Deprimida { get => deprimida; set => deprimida = value; }
+        public int Enojada { get => enojada; set => enojada = value; }
+        public int Nauseas { get => nauseas; set => nauseas = value; }
+        public int Libidinosa { get => libidinosa; set => libidinosa = value; }
+        public int Estres { get => estres; set => estres = value; }
+        public int Irritable { get => irritable; set => irritable = value; }
+        public int Insomnio { get => insomnio; set => insomnio = value; }
+        public int Rara { get => rara; set => rara = value; }
+        public int Sensible { get => sensible; set => sensible = value; }
+        public int DolorCabeza { get => dolorCabeza; set => dolorCabeza = value; }
+        public int Migraña { get => migraña; set => migraña = value; }
+        public int DolorPechos { get => dolorPechos; set => dolorPechos = value; }
+        public int SensibilidadPechos { get => sensibilidadPechos; set => sensibilidadPechos = value; }
+        public int DolorEspalda { get => dolorEspalda; set => dolorEspalda = value; }
+        public int DolorLumbar { get => dolorLumbar; set => dolorLumbar = value; }
+        public int Calambre { get => calambre; set => calambre = value; }
+        public int Escalosfrios { get => escalosfrios; set => escalosfrios = value; }
+        public int Sarpullido { get => sarpullido; set => sarpullido = value; }
+        public int Sofoco { get => sofoco; set => sofoco = value; }
+        public int DolorPelvis { get => dolorPelvis; set => dolorPelvis = value; }
+        public int Hinchazon { get => hinchazon; set => hinchazon = value; }
+        public int Estreñimiento { get => estreñimiento; set => estreñimiento = value; }
+        public int Diarrea { get => diarrea; set => diarrea = value; }
+        public int Antojos { get => antojos; set => antojos = value; }
+        public int DolorPorOvulacion { get => dolorPorOvulacion; set => dolorPorOvulacion = value; }
+        public int Sangrado { get => sangrado; set => sangrado = value; }
+        public int Manchado { get => manchado; set => manchado = value; }
+        public int Seco { get => seco; set => seco = value; }
+        public int Pegajoso { get => pegajoso; set => pegajoso = value; }
+        public int Cremoso { get => cremoso; set => cremoso = value; }
+        public int Verde { get => verde; set => verde = value; }
+        public int ConSangre { get => conSangre; set => conSangre = value; }
+        public int ConMalOlor { get => conMalOlor; set => conMalOlor = value; }
     }
 }

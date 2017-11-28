@@ -15,284 +15,300 @@ namespace Calendar.Controller {
                 Registro r = new Registro();
                 Data d = new Data();
 
-                if (r.Inicio == checked(true)) {
-                    r.Inicio = Boolean.Parse(context.Request.Params[0]);
-                } else if (r.Inicio == checked(false)){
-                    r.Inicio = Boolean.Parse(context.Request.Params[0]);
-                }
+            r.InicioOtermino = context.Request.Params["checkinicio"];
+            r.Observacion = context.Request.Params["observacion"];
+            r.MetodoAnticonceptivo = context.Request.Params["Metodo"];
 
-            // r.Inicio = Boolean.Parse(context.Request.Params["checkinicio"]);
-
-                if (r.Termino == checked(true)) {
-                    r.Termino = Boolean.Parse(context.Request.Params[1]);
-                } else if (r.Termino == checked(false)) {
-                    r.Termino = Boolean.Parse(context.Request.Params[0]);
-                }
-
-
-                //r.Termino = Boolean.Parse(context.Request.Params["checktermino"]);
-
-                r.Observacion = context.Request.Params["observacion"];
-                r.MetodoAnticonceptivo = context.Request.Params["Metodo"];
-
-                if (r.ActoSexual == checked(true)) {
-                    r.ActoSexual = Boolean.Parse(context.Request.Params[1]);
-                } else if (r.ActoSexual == checked(false)) {
-                    r.ActoSexual = Boolean.Parse(context.Request.Params[0]);
-                }
+            string checkSexual = context.Request.Params["checkActosexual"];
+            if (checkSexual == "true") {
+                r.ActoSexual = 1;
+            }
+            else if (checkSexual == null) {
+                r.ActoSexual = 0;
+            }
 
             // r.ActoSexual = Boolean.Parse(context.Request.Params["checkActosexual"]);
-
-                if (r.Agotada == checked(true)) {
-                    r.Agotada = Boolean.Parse(context.Request.Params[1]);
-                } else if (r.Agotada == checked(false)) {
-                    r.Agotada = Boolean.Parse(context.Request.Params[0]);
+            string checkagotada = context.Request.Params["checkagotada"];
+            if (checkagotada == "true") {
+                    r.Agotada = 1;
+                } else if (checkagotada == null) {
+                    r.Agotada = 0;
                 }
 
             //r.Agotada = Boolean.Parse(context.Request.Params["checkagotada"]);
-
-            if (r.Ansiosa == checked(true)) {
-                r.Ansiosa = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Ansiosa == checked(false)) {
-                r.Ansiosa = Boolean.Parse(context.Request.Params[0]);
+            string checkAnsionsa = context.Request.Params["checkansiosa"];
+            if (checkAnsionsa == "true") {
+                r.Ansiosa = 1;
+            } else if (checkAnsionsa == null) {
+                r.Ansiosa = 0;
             }
 
             //r.Ansiosa = Boolean.Parse(context.Request.Params["checkansiosa"]);
 
-            if (r.Coqueta == checked(true)) {
-                r.Coqueta = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Coqueta == checked(false)) {
-                r.Coqueta = Boolean.Parse(context.Request.Params[0]);
+            String checkcoqueta = context.Request.Params["checkcoqueta"];
+            if (checkcoqueta == "true") {
+                r.Coqueta = 1;
+            } else if (checkcoqueta == null) {
+                r.Coqueta = 0;
             }
             //r.Coqueta = Boolean.Parse(context.Request.Params["checkcoqueta"]);
 
-            if (r.Deprimida == checked(true)) {
-                r.Deprimida = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Deprimida == checked(false)) {
-                r.Deprimida = Boolean.Parse(context.Request.Params[0]);
+            string checkDeprimida = context.Request.Params["checkdeprimida"];
+            if (checkDeprimida == "true") {
+                r.Deprimida = 1;
+            } else if (checkDeprimida == null) {
+                r.Deprimida = 0;
             }
 
             //r.Deprimida = Boolean.Parse(context.Request.Params["checkdeprimida"]);
 
-            if (r.Enojada == checked(true)) {
-                r.Enojada = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Enojada == checked(false)) {
-                r.Enojada = Boolean.Parse(context.Request.Params[0]);
+            string checkEnojada = context.Request.Params["checkenojada"];
+            if (checkEnojada == "true") {
+                r.Enojada = 1;
+            } else if (checkEnojada == null) {
+                r.Enojada = 0;
             }
             //r.Enojada = Boolean.Parse(context.Request.Params["checkenojada"]);
 
-            if (r.Nauseas == checked(true)) {
-                r.Nauseas = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Nauseas == checked(false)) {
-                r.Nauseas = Boolean.Parse(context.Request.Params[0]);
+            string checkNauseas = context.Request.Params["checknauseas"];
+            if (checkNauseas == "true") {
+                r.Nauseas = 1;
+            } else if (checkNauseas == null) {
+                r.Nauseas = 0;
             }
             //r.Nauseas = Boolean.Parse(context.Request.Params["checknauseas"]);
 
-            if (r.Libidinosa == checked(true)) {
-                r.Libidinosa = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Libidinosa == checked(false)) {
-                r.Libidinosa = Boolean.Parse(context.Request.Params[0]);
+            string checkLibidinosa = context.Request.Params["checklibidinosa"];
+            if (checkLibidinosa == "true") {
+                r.Libidinosa = 1;
+            } else if (checkLibidinosa == null) {
+                r.Libidinosa = 0;
             }
             //r.Libidinosa = Boolean.Parse(context.Request.Params["checklibidinosa"]);
 
-            if (r.Estres == checked(true)) {
-                r.Estres = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Estres == checked(false)) {
-                r.Estres = Boolean.Parse(context.Request.Params[0]);
+            string checkEstres = context.Request.Params["checkestres"];
+            if (checkEstres == "true") {
+                r.Estres = 1;
+            } else if (checkEstres == null) {
+                r.Estres = 0;
             }
             //r.Estres = Boolean.Parse(context.Request.Params["checkestres"]);
 
-            if (r.Irritable == checked(true)) {
-                r.Irritable = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Irritable == checked(false)) {
-                r.Irritable = Boolean.Parse(context.Request.Params[0]);
+            string checkIrritable = context.Request.Params["checkirritable"];
+            if (checkIrritable == "true") {
+                r.Irritable = 1;
+            } else if (checkIrritable == null) {
+                r.Irritable = 0;
             }
             //r.Irritable = Boolean.Parse(context.Request.Params["checkirritable"]);
 
-            if (r.Insomnio == checked(true)) {
-                r.Insomnio = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Insomnio == checked(false)) {
-                r.Insomnio = Boolean.Parse(context.Request.Params[0]);
+            string checkInsomnio = context.Request.Params["checkinsomnio"];
+            if (checkInsomnio == "true") {
+                r.Insomnio = 1;
+            } else if (checkInsomnio == null) {
+                r.Insomnio = 0;
             }
             //r.Insomnio = Boolean.Parse(context.Request.Params["checkinsomnio"]);
 
-            if (r.Rara == checked(true)) {
-                r.Rara = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Rara == checked(false)) {
-                r.Rara = Boolean.Parse(context.Request.Params[0]);
+            string checkRara = context.Request.Params["checkrara"];
+            if (checkRara == "true") {
+                r.Rara = 1;
+            } else if (checkRara == null) {
+                r.Rara = 0;
             }
             //r.Rara = Boolean.Parse(context.Request.Params["checkrara"]);
 
-            if (r.Sensible == checked(true)) {
-                r.Sensible = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Sensible == checked(false)) {
-                r.Sensible = Boolean.Parse(context.Request.Params[0]);
+            string checkSensible = context.Request.Params["checksensible"];
+            if (checkSensible == "true") {
+                r.Sensible = 1;
+            } else if (checkSensible == null) {
+                r.Sensible = 0;
             }
             //r.Sensible = Boolean.Parse(context.Request.Params["checksensible"]);
 
-            if (r.DolorCabeza == checked(true)) {
-                r.DolorCabeza = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.DolorCabeza == checked(false)) {
-                r.DolorCabeza = Boolean.Parse(context.Request.Params[0]);
+            string checkDolorCabeza = context.Request.Params["checkdolordecabeza"];
+            if (checkDolorCabeza == "true") {
+                r.DolorCabeza = 1;
+            } else if (checkDolorCabeza == null) {
+                r.DolorCabeza = 0;
             }
             //r.DolorCabeza = Boolean.Parse(context.Request.Params["checkdolordecabeza"]);
 
-            if (r.Migraña == checked(true)) {
-                r.Migraña = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Migraña == checked(false)) {
-                r.Migraña = Boolean.Parse(context.Request.Params[0]);
+            string checkMigraña = context.Request.Params["checkmigraña"];
+            if (checkMigraña == "true") {
+                r.Migraña = 1;
+            } else if (checkMigraña == null) {
+                r.Migraña = 0;
             }
             //r.Migraña = Boolean.Parse(context.Request.Params["checkmigraña"]);
 
-            if (r.DolorPechos == checked(true)) {
-                r.DolorPechos = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.DolorPechos == checked(false)) {
-                r.DolorPechos = Boolean.Parse(context.Request.Params[0]);
+            string checkDolorpeshos = context.Request.Params["checkdolorpechos"];
+            if (checkDolorpeshos == "true") {
+                r.DolorPechos = 1;
+            } else if (checkDolorpeshos == null) {
+                r.DolorPechos = 0;
             }
             //r.DolorPechos = Boolean.Parse(context.Request.Params["checkdolorpechos"]);
 
-            if (r.SensibilidadPechos == checked(true)) {
-                r.SensibilidadPechos = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Libidinosa == checked(false)) {
-                r.SensibilidadPechos = Boolean.Parse(context.Request.Params[0]);
+            string checkSensibilidadPeshos = context.Request.Params["checksensibilidadpechos"];
+            if (checkSensibilidadPeshos == "true") {
+                r.SensibilidadPechos = 1;
+            } else if (checkSensibilidadPeshos == null) {
+                r.SensibilidadPechos = 0;
             }
             //r.SensibilidadPechos = Boolean.Parse(context.Request.Params["checksensibilidadpechos"]);
 
-            if (r.DolorLumbar == checked(true)) {
-                r.DolorLumbar = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.DolorLumbar == checked(false)) {
-                r.DolorLumbar = Boolean.Parse(context.Request.Params[0]);
+            string checkDolorLumbar = context.Request.Params["checkdolorlumbar"];
+            if (checkDolorLumbar == "true") {
+                r.DolorLumbar = 1;
+            } else if (checkDolorLumbar == null) {
+                r.DolorLumbar = 0;
             }
             //r.DolorLumbar = Boolean.Parse(context.Request.Params["checkdolorlumbar"]);
 
-            if (r.Calambre == checked(true)) {
-                r.Calambre = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Calambre == checked(false)) {
-                r.Calambre = Boolean.Parse(context.Request.Params[0]);
+            string checkCalambre = context.Request.Params["checkcalambre"];
+            if (checkCalambre == "true") {
+                r.Calambre = 1;
+            } else if (checkCalambre == null) {
+                r.Calambre = 0;
             }
             //r.Calambre = Boolean.Parse(context.Request.Params["checkcalambre"]);
 
-            if (r.Escalosfrios == checked(true)) {
-                r.Escalosfrios = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Escalosfrios == checked(false)) {
-                r.Escalosfrios = Boolean.Parse(context.Request.Params[0]);
+            string checkEscalosfrios = context.Request.Params["checkescalofrios"];
+            if (checkEscalosfrios == "true") {
+                r.Escalosfrios = 1;
+            } else if (checkEscalosfrios == null) {
+                r.Escalosfrios = 0;
             }
             //r.Escalosfrios = Boolean.Parse(context.Request.Params["checkescalofrios"]);
 
-            if (r.Sarpullido == checked(true)) {
-                r.Sarpullido = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Sarpullido == checked(false)) {
-                r.Sarpullido = Boolean.Parse(context.Request.Params[0]);
+            string checkSarpullidos = context.Request.Params["checksarpullido"];
+            if (checkSarpullidos == "true") {
+                r.Sarpullido = 1;
+            } else if (checkSarpullidos == null) {
+                r.Sarpullido = 0;
             }
             //r.Sarpullido = Boolean.Parse(context.Request.Params["checksarpullido"]);
 
-            if (r.Sofoco == checked(true)) {
-                r.Sofoco = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Sofoco == checked(false)) {
-                r.Sofoco = Boolean.Parse(context.Request.Params[0]);
+            string checkSofoco = context.Request.Params["checksofoco"];
+            if (checkSofoco == "true") {
+                r.Sofoco = 1;
+            } else if (checkSofoco == null) {
+                r.Sofoco = 0;
             }
             //r.Sofoco = Boolean.Parse(context.Request.Params["checksofoco"]);
 
-            if (r.DolorPelvis == checked(true)) {
-                r.DolorPelvis = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.DolorPelvis == checked(false)) {
-                r.DolorPelvis = Boolean.Parse(context.Request.Params[0]);
+            string checkDolorPelvis = context.Request.Params["checkdolorpelvis"];
+            if (checkDolorPelvis == "true") {
+                r.DolorPelvis = 1;
+            } else if (checkDolorPelvis == null) {
+                r.DolorPelvis = 0;
             }
             //r.DolorPelvis = Boolean.Parse(context.Request.Params["checkdolorpelvis"]);
 
-            if (r.Hinchazon == checked(true)) {
-                r.Hinchazon = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Hinchazon == checked(false)) {
-                r.Hinchazon = Boolean.Parse(context.Request.Params[0]);
+            string checkHinchazon = context.Request.Params["checkhinchazon"];
+            if (checkHinchazon == "true") {
+                r.Hinchazon = 1;
+            } else if (checkHinchazon == null) {
+                r.Hinchazon = 0;
             }
             //r.Hinchazon = Boolean.Parse(context.Request.Params["checkhinchazon"]);
 
-            if (r.Estreñimiento == checked(true)) {
-                r.Estreñimiento = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Estreñimiento == checked(false)) {
-                r.Estreñimiento = Boolean.Parse(context.Request.Params[0]);
+            string checkEstreñimiento = context.Request.Params["checkestreñimiento"];
+            if (checkEstreñimiento == "true") {
+                r.Estreñimiento = 1;
+            } else if (checkEstreñimiento == null) {
+                r.Estreñimiento = 0;
             }
             //r.Estreñimiento = Boolean.Parse(context.Request.Params["checkestreñimiento"]);
 
-            if (r.Diarrea == checked(true)) {
-                r.Diarrea = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Diarrea == checked(false)) {
-                r.Diarrea = Boolean.Parse(context.Request.Params[0]);
+            string checkDiarrea = context.Request.Params["checkdiarrea"];
+            if (checkDiarrea == "true") {
+                r.Diarrea = 1;
+            } else if (checkDiarrea == null) {
+                r.Diarrea = 0;
             }
             //r.Diarrea = Boolean.Parse(context.Request.Params["checkdiarrea"]);
 
-            if (r.Antojos == checked(true)) {
-                r.Antojos = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Antojos == checked(false)) {
-                r.Antojos = Boolean.Parse(context.Request.Params[0]);
+            string checkAnteojos = context.Request.Params["checkantojos"];
+            if (checkAnteojos == "true") {
+                r.Antojos = 1;
+            } else if (checkAnteojos == null) {
+                r.Antojos = 0;
             }
             //r.Antojos = Boolean.Parse(context.Request.Params["checkantojos"]);
 
-            if (r.DolorPorOvulacion == checked(true)) {
-                r.DolorPorOvulacion = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.DolorPorOvulacion == checked(false)) {
-                r.DolorPorOvulacion = Boolean.Parse(context.Request.Params[0]);
+            string checkDolorOvulacion = context.Request.Params["checkdolorporovulacion"];
+            if (checkDolorOvulacion == "true") {
+                r.DolorPorOvulacion = 1;
+            } else if (checkDolorOvulacion == null) {
+                r.DolorPorOvulacion = 0;
             }
             //r.DolorPorOvulacion = Boolean.Parse(context.Request.Params["checkdolorporovulacion"]);
 
-            if (r.Sangrado == checked(true)) {
-                r.Sangrado = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Sangrado == checked(false)) {
-                r.Sangrado = Boolean.Parse(context.Request.Params[0]);
+            string checkSangrado = context.Request.Params["checksangrado"];
+            if (checkSangrado == "true") {
+                r.Sangrado = 1;
+            } else if (checkSangrado == null) {
+                r.Sangrado = 0;
             }
             //r.Sangrado = Boolean.Parse(context.Request.Params["checksangrado"]);
 
-            if (r.Manchado == checked(true)) {
-                r.Manchado = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Manchado == checked(false)) {
-                r.Manchado = Boolean.Parse(context.Request.Params[0]);
+            string checkManchado = context.Request.Params["checkmanchado"];
+            if (checkManchado == "true") {
+                r.Manchado = 1;
+            } else if (checkManchado == null) {
+                r.Manchado = 0;
             }
             //r.Manchado = Boolean.Parse(context.Request.Params["checkmanchado"]);
 
-            if (r.Seco == checked(true)) {
-                r.Seco = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Seco == checked(false)) {
-                r.Seco = Boolean.Parse(context.Request.Params[0]);
+            string checkSeco = context.Request.Params["checkseco"];
+            if (checkSeco == "true") {
+                r.Seco = 1;
+            } else if (checkSeco == null) {
+                r.Seco = 0;
             }
             //r.Seco = Boolean.Parse(context.Request.Params["checkseco"]);
 
-            if (r.Pegajoso == checked(true)) {
-                r.Pegajoso = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Pegajoso == checked(false)) {
-                r.Pegajoso = Boolean.Parse(context.Request.Params[0]);
+            string checkPegajoso = context.Request.Params["checkpegajoso"];
+            if (checkPegajoso == "true") {
+                r.Pegajoso = 1;
+            } else if (checkPegajoso == null) {
+                r.Pegajoso = 0;
             }
             //r.Pegajoso = Boolean.Parse(context.Request.Params["checkpegajoso"]);
 
-            if (r.Cremoso == checked(true)) {
-                r.Cremoso = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Cremoso == checked(false)) {
-                r.Cremoso = Boolean.Parse(context.Request.Params[0]);
+            string checkCremoso = context.Request.Params["checkcremoso"];
+            if (checkCremoso == "true") {
+                r.Cremoso = 1;
+            } else if (checkCremoso == null) {
+                r.Cremoso = 0;
             }
             //r.Cremoso = Boolean.Parse(context.Request.Params["checkcremoso"]);
 
-            if (r.Verde == checked(true)) {
-                r.Verde = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.Verde == checked(false)) {
-                r.Verde = Boolean.Parse(context.Request.Params[0]);
+            string checkVerde = context.Request.Params["checkverde"];
+            if (checkVerde == "true") {
+                r.Verde = 1;
+            } else if (checkVerde == null) {
+                r.Verde = 0;
             }
             //r.Verde = Boolean.Parse(context.Request.Params["checkverde"]);
 
-            if (r.ConSangre == checked(true)) {
-                r.ConSangre = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.ConSangre == checked(false)) {
-                r.ConSangre = Boolean.Parse(context.Request.Params[0]);
+            string checkConSangre = context.Request.Params["checkconSangre"];
+            if (checkConSangre == "true") {
+                r.ConSangre = 1;
+            } else if (checkConSangre == null) {
+                r.ConSangre = 0;
             }
             //r.ConSangre = Boolean.Parse(context.Request.Params["checkconSangre"]);
 
-            if (r.ConMalOlor == checked(true)) {
-                r.ConMalOlor = Boolean.Parse(context.Request.Params[1]);
-            } else if (r.ConMalOlor == checked(false)) {
-                r.ConMalOlor = Boolean.Parse(context.Request.Params[0]);
+            string checkMalOlor = context.Request.Params["checkconMalOlor"];
+            if (checkMalOlor == "true") {
+                r.ConMalOlor = 1;
+            } else if (checkMalOlor == null) {
+                r.ConMalOlor = 0;
             }
             //r.ConMalOlor = Boolean.Parse(context.Request.Params["checkconMalOlor"]);
-
-
-
 
                 d.RegistrarChecks(r);
 

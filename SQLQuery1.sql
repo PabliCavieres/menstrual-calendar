@@ -26,8 +26,7 @@ CREATE TABLE fichaPeriodoInicio(
 GO
 CREATE TABLE registro(
 	id INT IDENTITY(1,1),
-    inicio bit,
-    termino bit,
+    inicioOtermino varchar(10),
     observacion varchar(1000),
     metodoAnticonceptivo varchar(10),
     actoSexual bit,

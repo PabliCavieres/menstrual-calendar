@@ -65,8 +65,7 @@ namespace Calendar.Model {
 
         public void RegistrarChecks(Registro r) {
             query = "INSERT INTO registro VALUES( " +
-                "'" + r.Inicio + "'," +
-                "'" + r.Termino + "', " +
+                "'" + r.InicioOtermino + "', " +
                 "'" + r.Observacion + "', " +
                 "'" + r.MetodoAnticonceptivo + "', " +
                 "'" + r.ActoSexual + "', " +

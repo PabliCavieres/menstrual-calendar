@@ -13,12 +13,10 @@
        <br><br><br>
        <div class="form"> 
            <div class="titulo"><h2>Cuentenos..</h2></div>
-           <p align="left" style="margin-left:40px;" >
+           <p align="left" style="margin-left:40px;" >          
 
-            
-
-            Inicio: <input type="checkbox" value="true" name="checkinicio"/><br/>
-            Termino: <input type="checkbox"  value="true" name="checktermino"/><br/>
+            Inicio: <input type="radio" value="Inicio" name="checkinicio" checked="checked"/><br/>
+            Termino: <input type="radio"  value="Termino" name="checkinicio"/><br/>
             Se encuentra usando Metodos Anticonceptivos?
             <input type="radio" name="Metodo" value="s" checked="checked"/> Si 
             <input type="radio" name="Metodo" value="n"/> No<br/>

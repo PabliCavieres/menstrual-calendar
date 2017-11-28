@@ -21,6 +21,14 @@
 </head>
 <body>
 <center>
+    <div class="formCostado">
+
+    </div>
+
+    <div class="CerrarSesion">
+    <input type="button" onclick="location.href = '../Controller/CerrarSesion.ashx'" value="Cerrar sesión" class="button1" id="btnSesion" /> 
+    </div>
+
     <div class="form">
         <div><br><br>
             Tus datos han sido cargados correctamente
@@ -43,11 +51,12 @@
             <TodayDayStyle BackColor="#CCCCCC" />
         </asp:Calendar>
     </form>
-    
-    Cuéntanos ..¿Cómo te sientes hoy? <input type="button" onclick="location.href='Registro.aspx'" value="Aquí" class="button1" /> 
-  </div>
-    <br>
-    <input type="button" onclick="location.href = '../Controller/CerrarSesion.ashx'" value="Cerrar sesión" class="button1" /> 
+     <br>
+    Cuéntanos ..¿Cómo te sientes hoy?<br> <input type="button" onclick="location.href = 'Registro.aspx'" value="Aquí" class="button1" id="btnEspecial"/> 
+    <br><br>
+    </div>
+    <br><br><br>
+
     <br>  
 </center>
 </body>
@@ -90,9 +99,23 @@ body{
     .form {
         font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
         border-style:outset;
-        max-width: 700px;
+        max-width: 600px;
         border-radius: 30px 30px 30px 30px;
         border-color:indianred;
+        background-color:white;
+        margin-left:110px;
+        
+
+    }
+     .formCostado {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        border-style:outset;
+        width: 280px;
+        height:570px;
+        border-radius: 30px 30px 30px 30px;
+        border-color:indianred;
+        background-color:white;
+        margin-right:1000px;
     }
 
     .titulo{
@@ -108,6 +131,17 @@ body{
     .imag{
         width:2px; height:2px;
         margin-right: 300px;
+    }
+    #btnEspecial{
+        width: 250px;
+    }
+    .CerrarSesion{
+        width: 200px;
+        margin-top: -570px;
+        margin-left:980px;
+    }
+    #btnSesion{
+        width:200px;
     }
 </style>
 </html>
