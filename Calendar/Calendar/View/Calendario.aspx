@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calendario.aspx.cs" Inherits="Calendar.View.Calendario" %>
+<%@ Import Namespace="Calendar.Model" %>
 
 <!DOCTYPE html>
 
@@ -23,6 +24,31 @@
 <center>
     <div class="formCostado">
 
+        
+
+         <h3>Tips</h3>
+        
+        <%  
+            Data d = new Data();
+            Random r = new Random();
+            int num_A = r.Next(1,13);
+
+
+            foreach (Tips t in d.getTip(r)) {
+
+                 Response.Write("<br/>"+d.getTip(r).ToString());
+            }
+
+           
+        %> 
+
+        
+        
+        <div style="margin-top:420px;">
+
+            <hr/>
+            Ver Registro <br/><input type="button" onclick="location.href = 'VerRegistro.aspx'" value="Aquí" class="button1" />
+        </div>
     </div>
 
     <div class="CerrarSesion">

@@ -18,8 +18,8 @@
             Inicio: <input type="radio" value="Inicio" name="checkinicio" checked="checked"/><br/>
             Termino: <input type="radio"  value="Termino" name="checkinicio"/><br/>
             Se encuentra usando Metodos Anticonceptivos?
-            <input type="radio" name="Metodo" value="s" checked="checked"/> Si 
-            <input type="radio" name="Metodo" value="n"/> No<br/>
+            <input type="radio" name="Metodo" value="Si" checked="checked"/> Si 
+            <input type="radio" name="Metodo" value="No"/> No<br/>
             Acto Sexual <input type="checkbox" value="true" name="checkActosexual"/><br/>
             Observaciones: 
             <input type="text" name="observacion"/><br/>
@@ -34,12 +34,12 @@
             </div>
             
             <p align="left" style="margin-left:40px; margin-top:-170px">
-            Agotada <input type="checkbox" name="checkagotada" value="true" /><br/>
-            Ansiosa <input type="checkbox" name="checkansiosa" value="true"/><br/>
-            Coqueta <input type="checkbox" name="checkcoqueta" value="true"/><br/>
-            Deprimida <input type="checkbox" name="checkdeprimida" value="true"/><br/>
-            Enojada <input type="checkbox" name="checkenojada" value="true"/><br/>
-            Nauseas <input type="checkbox" name="checknauseas" value="true"/><br/>
+            <input type="checkbox" name="checkagotada" value="true" /> Agotada <br/>
+            <input type="checkbox" name="checkansiosa" value="true"/> Ansiosa <br/>
+            <input type="checkbox" name="checkcoqueta" value="true"/> Coqueta <br/>
+            <input type="checkbox" name="checkdeprimida" value="true"/> Deprimida <br/>
+            <input type="checkbox" name="checkenojada" value="true"/> Enojada <br/>
+            <input type="checkbox" name="checknauseas" value="true"/> Nauseas <br/>
            </p>
            <p align="right" style="margin-top:-150px; margin-right:40px;">
             Libidinosa <input type="checkbox" name="checklibidinosa" value="true"/><br>
@@ -59,52 +59,52 @@
                 <img src="../Imagenes/carita.gif" width="300" height="170">
             </div>
            <p align="left" style="margin-left:40px; margin-top:-170px">
-            Dolor cabeza <input type="checkbox" name="checkdolordecabeza" value="true"/><br>
-            Migraña <input type="checkbox" name="checkmigraña" value="true"/><br>
-            Dolor pechos <input type="checkbox" name="checkdolorpechos" value="true"/><br>
-            Sensibilidad pechos <input type="checkbox" name="checksensibilidadpechos" value="true"/><br>
-            Dolor espalda <input type="checkbox" name="checkdolorespalda" value="true"/><br>
-            Dolor lumbar <input type="checkbox" name="checkdolorlumbar" value="true"/><br>
-            Calambre <input type="checkbox" name="checkcalambre" value="true"/><br>
-            Escalosfrios <input type="checkbox" name="checkescalofrios" value="true"/><br>
-            Sarpullido <input type="checkbox" name="checksarpullido" value="true" /><br>
+            <input type="checkbox" name="checkdolordecabeza" value="true"/> Dolor de cabeza <br/>
+            <input type="checkbox" name="checkmigraña" value="true"/> Migraña <br/>
+            <input type="checkbox" name="checkdolorpechos" value="true"/> Dolor de pechos <br/>
+            <input type="checkbox" name="checksensibilidadpechos" value="true"/> Sensibilidad pechos <br/>
+            <input type="checkbox" name="checkdolorespalda" value="true"/> Dolor espalda <br/>
+            <input type="checkbox" name="checkdolorlumbar" value="true"/> Dolor lumbar <br/>
+            <input type="checkbox" name="checkcalambre" value="true"/> Calambre <br/>
+            <input type="checkbox" name="checkescalofrios" value="true"/> Escalosfrios <br/>
+            <input type="checkbox" name="checksarpullido" value="true" /> Sarpullido <br/>
             </p>
 
            <p align="right" style="margin-top:-236px; margin-right:40px;">
-            Sofoco <input type="checkbox" name="checksofoco" value="true"/><br>
-            Dolor de Pelvis <input type="checkbox" name="checkdolorpelvis" value="true"/><br>
-            Hinchazon <input type="checkbox" name="checkhinchazon" value="true"/><br>
-            Estreñimiento <input type="checkbox" name="checkestreñimiento" value="true"/><br>
-            Diarrea <input type="checkbox" name="checkdiarrea" value="true"/><br>
-            Antojos <input type="checkbox" name="checkantojos" value="true"/><br>
-            Dolor por ovulacion <input type="checkbox" name="checkdolorporovulacion" value="true"/><br>
-            Sangrado <input type="checkbox" name="checksangrado" value="true"/><br>
-            Manchado <input type="checkbox" name="checkmanchado" value="true"/><br><br>
+            Sofoco <input type="checkbox" name="checksofoco" value="true"/><br/>
+            Dolor de Pelvis <input type="checkbox" name="checkdolorpelvis" value="true"/><br/>
+            Hinchazon <input type="checkbox" name="checkhinchazon" value="true"/><br/>
+            Estreñimiento <input type="checkbox" name="checkestreñimiento" value="true"/><br/>
+            Diarrea <input type="checkbox" name="checkdiarrea" value="true"/><br/>
+            Antojos <input type="checkbox" name="checkantojos" value="true"/><br/>
+            Dolor por ovulacion <input type="checkbox" name="checkdolorporovulacion" value="true"/><br/>
+            Sangrado <input type="checkbox" name="checksangrado" value="true"/><br/>
+            Manchado <input type="checkbox" name="checkmanchado" value="true"/><br/><br/>
             </p>
-           </div><br><br>
+           </div><br/><br/>
 
              <div class="form"> 
             <h4>Tipo de Fluido</h4>
-            <hr>
+            <hr/>
            <div class="carita">
                 <img src="../Imagenes/carita.gif" width="300" height="170">
             </div>
 
             <p align="left" style="margin-left:40px; margin-top:-170px">
-            Seco <input type="checkbox" name="checkseco" value="true"/><br>
-            Pegajoso <input type="checkbox" name="checkpegajoso" value="true"/><br>
-            Cremoso <input type="checkbox" name="checkcremoso" value="true"/><br>
+            <input type="checkbox" name="checkseco" value="true"/> Seco <br/>
+            <input type="checkbox" name="checkpegajoso" value="true"/> Pegajoso <br/>
+            <input type="checkbox" name="checkcremoso" value="true"/> Cremoso <br/>
             </p>
 
            <p align="right" style="margin-top:-90px; margin-right:40px;">
-            Verde <input type="checkbox" name="checkverde" value="true"/><br>
-            Con Sangre <input type="checkbox" name="checkconSangre" value="true"/><br>
-            Con Mal Olor <input type="checkbox" name="checkconMalOlor" value="true"/><br><br>
-            </p><br><br>
-           </div><br><br>
+            Verde <input type="checkbox" name="checkverde" value="true"/><br/>
+            Con Sangre <input type="checkbox" name="checkconSangre" value="true"/><br/>
+            Con Mal Olor <input type="checkbox" name="checkconMalOlor" value="true"/><br/><br/>
+            </p><br/><br/>
+           </div><br/><br/>
             <br>
 
-            <input type="submit" value="Registrar Datos" class="button1"/><br><br>
+            <input type="submit" value="Registrar Datos" class="button1"/><br/><br/>
     </form>
     </center>
 

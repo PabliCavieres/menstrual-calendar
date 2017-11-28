@@ -43,9 +43,7 @@ namespace Calendar.Model {
             }
             return u;
         }
-
-        //Metodo de buscar usuario. Hace sueñoS
-
+        
         public List<Tips> getTip(int id) {
             query = "SELECT * FROM tips WHERE id = " + id;
             List<Tips> lista = new List<Tips>();
@@ -107,6 +105,59 @@ namespace Calendar.Model {
                 "'" + r.ConMalOlor + "') ";
             con.Ejecutar(query);
 
+        }
+
+        public List<Registro> getRegistro(String id) {
+            query = "SELECT * FROM registro WHERE id = " + id;
+            List<Registro> lista = new List<Registro>();
+            con.Ejecutar(query);
+            Registro r;
+            while (con.rs.Read()) {
+
+                r = new Registro();
+
+                r.Id = con.rs.GetInt32(0);
+                r.InicioOtermino = con.rs.GetString(1);
+                r.Agotada = con.rs.GetInt32(2);
+                r.Ansiosa = con.rs.GetInt32(3);
+                r.Coqueta = con.rs.GetInt32(4);
+                r.Deprimida = con.rs.GetInt32(5);
+                r.Enojada = con.rs.GetInt32(6);
+                r.Nauseas = con.rs.GetInt32(7);
+                r.Libidinosa = con.rs.GetInt32(8);
+                r.Estres = con.rs.GetInt32(9);
+                r.Irritable = con.rs.GetInt32(10);
+                r.Insomnio = con.rs.GetInt32(11);
+                r.Rara = con.rs.GetInt32(12);
+                r.Sensible = con.rs.GetInt32(13);
+                r.DolorCabeza = con.rs.GetInt32(14);
+                r.Migraña = con.rs.GetInt32(15);
+                r.DolorPechos = con.rs.GetInt32(16);
+                r.SensibilidadPechos = con.rs.GetInt32(17);
+                r.DolorEspalda = con.rs.GetInt32(18);
+                r.DolorLumbar = con.rs.GetInt32(19);
+                r.Calambre = con.rs.GetInt32(20);
+                r.Escalosfrios = con.rs.GetInt32(21);
+                r.Sarpullido = con.rs.GetInt32(22);
+                r.Sofoco = con.rs.GetInt32(23);
+                r.DolorPelvis = con.rs.GetInt32(24);
+                r.Hinchazon = con.rs.GetInt32(25);
+                r.Estreñimiento = con.rs.GetInt32(26);
+                r.Diarrea = con.rs.GetInt32(27);
+                r.Antojos = con.rs.GetInt32(28);
+                r.DolorPorOvulacion = con.rs.GetInt32(29);
+                r.Sangrado = con.rs.GetInt32(30);
+                r.Manchado = con.rs.GetInt32(32);
+                r.Seco = con.rs.GetInt32(32);
+                r.Pegajoso = con.rs.GetInt32(33);
+                r.Cremoso = con.rs.GetInt32(34);
+                r.Verde = con.rs.GetInt32(35);
+                r.ConSangre = con.rs.GetInt32(36);
+                r.ConMalOlor = con.rs.GetInt32(37);
+
+                lista.Add(r);
+            }
+            return lista;
         }
     }
 }

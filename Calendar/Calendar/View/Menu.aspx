@@ -20,6 +20,7 @@
 <center>
     <div class="form">
     <form action="../Controller/RegistrarCiclo.ashx" method="post">
+        <br/><br/><br/>
        <div class="titulo"><h2>Bienvenida <%=nombre%></h2></div><br>
             <br/>
             Necesitamos que llene estos datos antes de Comenzar

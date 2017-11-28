@@ -80,12 +80,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model.bd.Script\bd_Calendar.sql" />
     <Content Include="View\Calendario.aspx" />
     <Content Include="View\CrearUsuario.aspx" />
     <Content Include="View\Error.aspx" />
     <Content Include="View\Index.aspx" />
     <Content Include="View\Menu.aspx" />
     <Content Include="View\Registro.aspx" />
+    <Content Include="View\VerRegistro.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +154,13 @@
     </Compile>
     <Compile Include="View\Registro.aspx.designer.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\VerRegistro.aspx.cs">
+      <DependentUpon>VerRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\VerRegistro.aspx.designer.cs">
+      <DependentUpon>VerRegistro.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

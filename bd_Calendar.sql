@@ -23,6 +23,8 @@ CREATE TABLE fichaPeriodoInicio(
     primary key(id)
 );
 
+select * from fichaPeriodoInicio
+
 GO
 CREATE TABLE registro(
 	id INT IDENTITY(1,1),
