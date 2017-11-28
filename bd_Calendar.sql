@@ -1,4 +1,4 @@
-﻿drop DATABASE calendario_bd;
+﻿<--drop DATABASE calendario_bd;
 CREATE DATABASE calendario_bd;
 GO
 USE calendario_bd;
@@ -99,7 +99,7 @@ insert into tips values ('La ausencia de menstruación es un síntoma importante
 insert into tips values ('Los óvulos son las células sexuales o gametos femeninos.​Son células grandes, esféricas e inmóviles. Desde la pubertad, cada 28 días aproximadamente, madura un ovocito en uno de los ovarios y pasa a una de las trompas de falopio, durante el denominado ciclo menstrual, este cuando se fecunda por un espermatozoide se convierte en un cigoto');
 
 
-
+select * from tips
 
 
 

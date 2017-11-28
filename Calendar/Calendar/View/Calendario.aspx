@@ -34,7 +34,7 @@
             int num_A = r.Next(1,13);
 
 
-            foreach (Tips t in d.getTip(r)) {
+            foreach (Tips t in d.getTip()) {
 
                  Response.Write("<br/>"+d.getTip(r).ToString());
             }
