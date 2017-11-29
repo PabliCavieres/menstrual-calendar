@@ -104,13 +104,13 @@ namespace Calendar.Model {
                 "'" + r.ConSangre + "', " +
                 "'" + r.ConMalOlor + "', " +
                 "'"+r.IdUsuario+"', " +
-                "NOW()) ";
+                " GETDATE())";
             con.Ejecutar(query);
 
         }
 
         public int getIdUsuario(String nombre) {
-            query = "SELECT id FROM usuario where usser = '" + nombre;
+            query = "SELECT id FROM usuario where usser = " + nombre;
             Usuario u = null;
             con.Ejecutar(query);
             int id = 0;

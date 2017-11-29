@@ -18,6 +18,7 @@ namespace Calendar.Controller {
                 String nombreUsuario = context.Request.Params["txtUsuarioInicio"];
                 String passUsuario = context.Request.Params["txtContraseñaInicio"];
 
+
                 Data d = new Data();
 
                 Usuario u = d.getUsuario(nombreUsuario, passUsuario);

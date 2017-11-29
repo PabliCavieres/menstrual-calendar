@@ -28,25 +28,25 @@
 
          <h3>Tips</h3>
         
-        <%  
-            Data d = new Data();
-            Random r = new Random();
-            int num_A = r.Next(1, 13);
+      <p>  <%  
+               Data d = new Data();           
+               Random r = new Random();
+               int num_A = r.Next(1, 13);
 
-            Tips t = d.getTip(num_A);
+               Tips t = d.getTip(num_A);
 
-            Response.Write(t.Descripcion);
+               Response.Write(t.Descripcion);
 
 
-        %> 
+        %> </p>
 
         
     </div>
     <!-- BERNY: ARREGLA EL BOTON!!!!!!! >:C -->
-    <div style="margin-bottom:1000px;margin-left:170px; position:fixed;">
+    <div style="margin-bottom:1000px;margin-left:85px; position:fixed;">
 
             <hr/>
-            Ver Registro <br/><input type="button" onclick="location.href = 'VerRegistro.aspx'" value="Aquí" class="button1" />
+            Ver Registro <br/><input type="button" onclick="location.href = 'VerRegistro.aspx'" value="Aquí" class="button1" id="btnEspecial" />
         </div>
     <div class="CerrarSesion">
     <input type="button" onclick="location.href = '../Controller/CerrarSesion.ashx'" value="Cerrar sesión" class="button1" id="btnSesion" /> 
@@ -75,6 +75,48 @@
         </asp:Calendar>
     </form>
      <br>
+   Su próximo día más fértil es: <%
+        DateTime fecha;
+        try {
+            Data da = new Data();
+
+            fecha = DateTime.Parse(Session["fechaUltimaRegla"].ToString());
+            fecha.AddDays(14);
+            Response.Write(fecha.AddDays(14).ToString("dd/M/yyyy"));
+        } catch (Exception) {
+
+            throw;
+        }
+       
+
+    %> <br/> 
+        
+     <!--<iframe src="https://es.calcuworld.com/salud/calculadora-menstrual/?iframe=1" width="100%" height="400"></iframe>-->
+
+  Su próxima regla aprox seria el: <%
+        
+        int ciclo;
+        try {
+            Data da = new Data();
+            fecha = DateTime.Parse(Session["fechaUltimaRegla"].ToString());
+            ciclo = int.Parse(Session["duracionCiclo"].ToString());
+            
+           // int resultado = fecha.Day + ciclo;
+            
+             fecha.AddDays(ciclo);
+
+            Response.Write(fecha.AddDays(ciclo).ToString("dd/M/yyyy"));
+        } catch (Exception) {
+
+            throw;
+        }
+       
+
+    %> <br/>
+
+    
+
+
     Cuéntanos ..¿Cómo te sientes hoy?<br> <input type="button" onclick="location.href = 'Registro.aspx'" value="Aquí" class="button1" id="btnEspecial"/> 
     <br><br>
     </div>

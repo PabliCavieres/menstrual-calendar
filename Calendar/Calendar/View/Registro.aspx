@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Calendar.View.Registro" %>
+<<%@ Import Namespace="Calendar.Model" %>
 
 <!DOCTYPE html>
 
@@ -9,11 +10,22 @@
 </head>
 <body>
 <center>
+
    <form action="../Controller/RegistrarDatos.ashx" method="post" id="checkForm">
        <br><br><br>
        <div class="form"> 
            <div class="titulo"><h2>Cuentenos..</h2></div>
            <p align="left" style="margin-left:40px;" >          
+         <%
+             String nombre = null;
+             
+                 Data d = new Data();
+                 nombre = (String)Session["txtUsuarioInicio"];
+                 int id = d.getIdUsuario(nombre);
+                 Session["idUsuario"] = id;
+             
+        %>
+
 
             Inicio: <input type="radio" value="Inicio" name="checkinicio" checked="checked"/><br/>
             Termino: <input type="radio"  value="Termino" name="checkinicio"/><br/>

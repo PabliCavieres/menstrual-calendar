@@ -14,15 +14,18 @@
    <form action="Calendario.aspx" method="post" id="checkForm">
  <br><br><br>
 
-        <% Data d = new Data();
-            
-            String nombre = (String)Session["txtUsuarioInicio"];
-            int id = d.getIdUsuario(nombre);
-            List<Registro> lista = d.getRegistro(id);
-
-
-            foreach (Registro r in lista) {
-            %>
+        <%
+            Registro r = new Registro();
+            String nombre = null;
+            try {
+                Data d = new Data();
+                nombre = (String)Session["txtUsuarioInicio"];
+                int id = d.getIdUsuario(nombre);
+                Session["idUsuario"] = id;
+            } catch (Exception) {
+                Response.Redirect("Calendario.aspx");
+            }
+        %>
 
        <div class="form"> 
            <div class="titulo"><h2>Datos</h2></div>
@@ -116,8 +119,9 @@
             </p><br/><br/>
            </div><br/><br/>
             <br>
-       <%} %>
+       
             <input type="submit" value="Volver" class="button1"/><br/><br/>
+
     </form>
     </center>
 

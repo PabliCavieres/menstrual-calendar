@@ -3,17 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace Calendar.Controller {
     /// <summary>
     /// Descripción breve de RegistrarDatos
     /// </summary>
-    public class RegistrarDatos:IHttpHandler {
+    public class RegistrarDatos:IHttpHandler,IRequiresSessionState {
 
         public void ProcessRequest(HttpContext context) {
            
                 Registro r = new Registro();
                 Data d = new Data();
+
+            String nombre = context.Request.Params["txtUsuarioInicio"];
+
+            int id = d.getIdUsuario(nombre);
+
+            context.Session["idUsuario"] = id;
 
             r.InicioOtermino = context.Request.Params["checkinicio"];
             r.Observacion = context.Request.Params["observacion"];
